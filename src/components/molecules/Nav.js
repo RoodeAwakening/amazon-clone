@@ -7,7 +7,7 @@ import ShoppingBasket from '../atoms/ShoppingBasket'
 function Nav() {
   return (
     <div className="nav__nav">
-      <NavBlock textOne={"Hello Guest"} textTwo={"Sign In"}/>
+      <NavBlock textOne={"Hello, Sign In"} textTwo={"Account & Lists"}/>
       <NavBlock textOne={"Returns"} textTwo={"& Orders"}/>
       <NavBlock textOne={"Your"} textTwo={"Prime"}/>
       <ShoppingBasket/>
