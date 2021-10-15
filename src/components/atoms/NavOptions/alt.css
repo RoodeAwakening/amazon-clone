@@ -1,0 +1,21 @@
+.nav__option{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+
+.nav__optionLineOne {
+  font-size: 12px;
+  line-height: 14px;
+  height: 14px;
+  font-weight: 400;
+  background-color: red;
+}
+
+.nav__optionLineTwo {
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 700;
+}
