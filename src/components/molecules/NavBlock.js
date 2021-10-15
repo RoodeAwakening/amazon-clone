@@ -1,5 +1,5 @@
 import React from 'react'
-import NavOptions from '../atoms/NavOptions'
+import NavOptions from '../atoms/NavOptions/NavOptions'
 
 import './Molecules.css'
 

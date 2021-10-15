@@ -1,10 +1,5 @@
 /* Logo */
-.nav__logo {
-  width: 100px;
-  object-fit: contain;
-  margin: 0 20px;
-  margin-top: 18px;
-}
+
 
 /* search */
 .nav__search {
@@ -32,26 +27,7 @@
 }
 
 /* nav options */
-.nav__option{
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
-  margin-right: 10px;
-  color: white;
-}
 
-.nav__optionLineOne {
-  font-size: 12px;
-  line-height: 14px;
-  height: 14px;
-  font-weight: 400;
-}
-
-.nav__optionLineTwo {
-  font-size: 14px;
-  line-height: 15px;
-  font-weight: 700;
-}
 
 /* shopping basket */
 .nav__optionBasket {
@@ -63,4 +39,18 @@
 .nav__basketCount {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+
+
+
+/* ProductTitle */
+.product__title{
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+/* ProductPrice */
+.product__price {
+  margin-top: 5px;
 }
