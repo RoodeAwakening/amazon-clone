@@ -1,6 +1,5 @@
 import React from "react";
 import styles from './NavOptions.module.css'
-import './alt.css'
 
 
 function NavOptions({ className, text }) {

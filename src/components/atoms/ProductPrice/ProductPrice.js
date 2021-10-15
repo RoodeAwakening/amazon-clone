@@ -1,9 +1,9 @@
 import React from 'react'
-import './Atoms.css'
+import styles from './ProductPrice.module.css'
 
 function ProductPrice({price}) {
   return (
-    <p className="product__price">
+    <p className={styles.product__price}>
       <small>$</small>
       <strong>{price}</strong>
     </p>

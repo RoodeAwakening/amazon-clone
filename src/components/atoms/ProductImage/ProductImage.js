@@ -1,5 +1,4 @@
 import React from 'react'
-import './Atoms.css'
 
 function ProductImage({image, title}) {
   return (

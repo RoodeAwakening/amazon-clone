@@ -1,9 +1,9 @@
 import React from 'react'
-import './Atoms.css'
+import styles from './ProductRating.module.css'
 
 function ProductRating({rating}) {
   return (
-    <div className="product__rating">
+    <div className={styles.product__rating}>
          {Array(rating)
             .fill()
             .map((_, i) => (

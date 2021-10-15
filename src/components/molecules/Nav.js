@@ -2,7 +2,7 @@ import React from 'react'
 import './Molecules.css'
 
 import NavBlock from './NavBlock'
-import ShoppingBasket from '../atoms/ShoppingBasket'
+import ShoppingBasket from '../atoms/ShoppingBasket/ShoppingBasket'
 
 function Nav() {
   return (

@@ -1,7 +1,7 @@
 import ShoppingBasket from '@material-ui/icons/ShoppingBasket'
 import React from 'react'
 import Logo from '../atoms/Logo/Logo'
-import Search from '../atoms/Search'
+import Search from '../atoms/Search/Search'
 import Nav from '../molecules/Nav'
 import NavBlock from '../molecules/NavBlock'
 

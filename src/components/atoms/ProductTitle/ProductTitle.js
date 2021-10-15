@@ -1,9 +1,8 @@
 import React from 'react'
-import './Atoms.css'
-
+import styles from './ProductTitle.module.css'
 function ProductTitle({title}) {
   return (
-    <div className="product__title">
+    <div className={styles.product__title}>
       <p>{title}</p>
     </div>
   )

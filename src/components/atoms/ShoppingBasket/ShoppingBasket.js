@@ -1,13 +1,13 @@
 import React from 'react'
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
-import './Atoms.css'
+import styles from './ShoppingBasket.module.css'
 
 function ShoppingBasket() {
   return (
-    <div className="nav__optionBasket">
+    <div className={styles.nav__optionBasket}>
       <ShoppingBasketIcon/>
-      <span className="nav__optionLineTwo nav__basketCount">
+      <span className={styles.nav__optionLineTwo ,styles.nav__basketCount}>
         0
       </span>
       

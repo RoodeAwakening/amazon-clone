@@ -1,0 +1,10 @@
+.nav__optionBasket {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.nav__basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
+}

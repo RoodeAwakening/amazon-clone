@@ -1,0 +1,23 @@
+.nav__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+
+
+
+.nav__searchInput {
+  border-radius:5px 0px 0px 5px;
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+.nav__searchIcon {
+  border-radius:0px 5px 5px 0px;
+  padding: 5px;
+  height: 22px !important;
+  background-color: #F3A847;
+}
