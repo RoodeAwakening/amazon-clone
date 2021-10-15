@@ -1,7 +1,6 @@
 import React from 'react'
-import NavOptions from '../atoms/NavOptions/NavOptions'
+import NavOptions from '../../atoms/NavOptions/NavOptions'
 
-import './Molecules.css'
 
 function NavBlock({textOne, textTwo}) {
   return (

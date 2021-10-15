@@ -1,5 +1,4 @@
 import React from 'react'
-import './Atoms.css'
 
 function Button({buttonText}) {
   return (
