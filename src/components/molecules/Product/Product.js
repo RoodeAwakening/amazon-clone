@@ -8,7 +8,28 @@ import Button from '../../atoms/Button/Button'
 
 import styles from "./Product.module.css";
 
+import { useStateValue } from "../../../services/StateProvider";
+
+
 function Product({ id, buttonText, title, image, rating, price }) {
+
+  const [{basket}, dispatch] = useStateValue()
+
+  const addToBasket = () =>{
+  
+    // dispatch to data layer
+    dispatch({
+      item: {
+        id: id, 
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      }
+    })
+  }
+
+
   return (
     <div className={styles.product}>
       <div className={styles.product__info}>
@@ -17,7 +38,7 @@ function Product({ id, buttonText, title, image, rating, price }) {
         <ProductRating rating={rating} />
       </div>
       <ProductImage image={image}/>
-      <Button buttonText={buttonText}/>
+      <Button buttonText={buttonText} onClick={addToBasket}/>
     </div>
   );
 }
