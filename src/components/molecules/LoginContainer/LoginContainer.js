@@ -31,8 +31,10 @@ function LoginContainer({email, emailOnChange, password, passwordOnChange}) {
     .then((userCredential) => {
       // Signed In
       const user = userCredential.user;
-      console.log('userSignIn', user);
-      history.push("/");
+      if(user){
+
+        history.push("/");
+      }
       })
       .catch((error) => alert(error.message));
   };
