@@ -11,6 +11,7 @@ import { useStateValue } from "../../../services/StateProvider";
 
 function Nav() {
   const [{ basket, user }, dispatch] = useStateValue();
+  console.log('user',user);
 
   const handleAuthenticaton = () => {
     if (user) {

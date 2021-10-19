@@ -5,13 +5,11 @@ import EmailInput from '../../atoms/EmailInput/EmailInput'
 import PasswordInput from '../../atoms/PasswordInput/PasswordInput'
 import TermsForSignup from '../../atoms/TermsForSignup/TermsForSignup'
 import styles from './LoginContainer.module.css'
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-import {signIn} from '../../../services/signIn'
-import {register} from '../../../services/register'
-import { auth } from "../../../firebase";
 
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 
 
@@ -22,14 +20,19 @@ function LoginContainer({email, emailOnChange, password, passwordOnChange}) {
 
 
   const history = useHistory()
+
+  
   const signIn = (e) => {
     console.log('test');
     e.preventDefault();
-
-    auth
-      .signInWithEmailAndPassword(email, password)
-      .then((auth) => {
-        history.push("/");
+    
+    
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed In
+      const user = userCredential.user;
+      console.log('userSignIn', user);
+      history.push("/");
       })
       .catch((error) => alert(error.message));
   };
@@ -54,10 +57,10 @@ function LoginContainer({email, emailOnChange, password, passwordOnChange}) {
     <div className={styles.login__container}>
       <h1>Sign-in</h1>
 
-      <form>
+      <form onSubmit={signIn}>
         <EmailInput email={email} onChange={emailOnChange}/>
         <PasswordInput password={password} onChange={passwordOnChange}/>
-        <ButtonLogin onClick={signIn}/>
+        <ButtonLogin />
       </form>
       <TermsForSignup/>
       <form>
