@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../organisms/NavBar';
+import NavBar from '../organisms/NavBar/NavBar';
 
 import styles from './Layout.module.css';
 
