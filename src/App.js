@@ -5,7 +5,7 @@ import LoginPage from "./components/pages/LoginPage/LoginPage";
 import Home from "./components/pages/Home/Home";
 import { auth } from "./firebase";
 import {useStateValue} from "./services/StateProvider"
-import Checkout from "./components/organisms/Checkout/Checkout";
+import CheckoutPage from "./components/pages/CheckoutPage/CheckoutPage"
 
 function App() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -42,7 +42,7 @@ function App() {
             <LoginPage/>
           </Route>
           <Route exact path ="/checkout">
-            <Checkout/>
+            <CheckoutPage/>
           </Route>
         </Switch>
       </Layout>

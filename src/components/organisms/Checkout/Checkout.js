@@ -14,7 +14,7 @@ function Checkout({ id, image, title, price, rating, hideButton }) {
   return (
     <div className={styles.checkout}>
       <div className={styles.checkout__left}>
-     <CheckoutAd/>
+     
 
     <div>
       <h3>Hello, {user?.email}</h3>

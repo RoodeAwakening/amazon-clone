@@ -19,12 +19,16 @@ function Nav() {
     }
   }
 
+  // regex to get everything before @
+  const email = user?.email.split('@')[0];
+
+
 
   return (
     <div className={styles.nav__nav}>
       <Link to={!user && './login'}>
       <div onClick={handleAuthenticaton} className="header__option">
-      <NavBlock textOne={`Hello, ${!user ? "Guest": user.email}`} textTwo={`${user ? "Sign Out" : "Sign In"}`}/>
+      <NavBlock textOne={`Hello, ${!user ? "Guest": email}`} textTwo={`${user ? "Sign Out" : "Sign In"}`}/>
       </div>
       </Link>
 
