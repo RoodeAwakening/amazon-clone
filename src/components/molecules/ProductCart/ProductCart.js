@@ -6,42 +6,43 @@ import ProductRating from "../../atoms/ProductRating/ProductRating";
 import ProductImage from '../../atoms/ProductImage/ProductImage'
 import ButtonProduct from '../../atoms/ButtonProduct/ButtonProduct'
 
-import styles from "./Product.module.css";
+import styles from "./ProductCart.module.css";
 
 import { useStateValue } from "../../../services/StateProvider";
 
 
-function Product({ id, buttonText, title, image, rating, price }) {
+function ProductCart({ id, hidebutton, title, image, rating, price }) {
 
   const [{basket}, dispatch] = useStateValue()
 
-  const addToBasket = () =>{
-  
-    // dispatch to data layer
+  const removeFromBasket = () => {
+    // remove the item from the basket
     dispatch({
-      type: "ADD_TO_BASKET",
-      item: {
-        id: id, 
-        title: title,
-        image: image,
-        price: price,
-        rating: rating,
-      }
+        type: 'REMOVE_FROM_BASKET',
+        id: id,
     })
-  }
+}
 
 
   return (
-    <div className={styles.product}>
-      <div className={styles.product__info}>
+    <div className={styles.checkoutProduct} >
+      
+      <div className={styles.checkoutProduct__image__container}>
+      <ProductImage image={image} className={styles.checkoutProduct__image}/>
+
+      </div>
+      
+        
+      <div className={styles.checkoutProduct__info}>
+
         <ProductTitle title={title} />
         <ProductPrice price={price} />
         <ProductRating rating={rating} />
+      
+      {!hidebutton && <ButtonProduct buttonText={'Remove from Basket'} onClick={removeFromBasket} />}
       </div>
-      <ProductImage image={image}/>
-      <ButtonProduct buttonText={buttonText} onClick={addToBasket} className={styles.product__remove}/>
     </div>
   );
 }
 
-export default Product;
+export default ProductCart;
