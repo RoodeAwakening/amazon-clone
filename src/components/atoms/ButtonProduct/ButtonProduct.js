@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './Button.module.css'
+import styles from './ButtonProduct.module.css'
 
-function Button({buttonText, onClick}) {
+function ButtonProduct({buttonText, onClick}) {
   return (
     <button onClick={onClick} className={styles.button}>
       {buttonText}
@@ -9,4 +9,4 @@ function Button({buttonText, onClick}) {
   )
 }
 
-export default Button
+export default ButtonProduct

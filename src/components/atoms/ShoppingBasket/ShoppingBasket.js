@@ -1,18 +1,23 @@
-import React from 'react'
+import React from "react";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import { useStateValue } from "../../../services/StateProvider";
 
-import styles from './ShoppingBasket.module.css'
+import styles from "./ShoppingBasket.module.css";
+import { Link } from "react-router-dom";
 
-function ShoppingBasket() {
+function ShoppingBasket({ count }) {
+  const [{ basket, user }, dispatch] = useStateValue();
+
   return (
-    <div className={styles.nav__optionBasket}>
-      <ShoppingBasketIcon/>
-      <span className={styles.nav__optionLineTwo ,styles.nav__basketCount}>
-        0
-      </span>
-      
-    </div>
-  )
+    <Link to="/checkout">
+      <div className={styles.nav__optionBasket}>
+        <ShoppingBasketIcon />
+        <span className={(styles.nav__optionLineTwo, styles.nav__basketCount)}>
+          {basket?.length}
+        </span>
+      </div>
+    </Link>
+  );
 }
 
-export default ShoppingBasket
+export default ShoppingBasket;

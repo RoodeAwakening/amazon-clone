@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import styles from "./Logo.module.css";
+import styles from "./LogoSignIn.module.css";
 
-function Logo() {
+function LogoSignIn() {
   return (
     <Link to="/">
       <img
         className={styles.nav__logo}
-        src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+        src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
         alt="Amazon Logo"
       />
     </Link>
   );
 }
 
-export default Logo;
+export default LogoSignIn;
