@@ -4,7 +4,7 @@ import styles from './PasswordInput.module.css'
 function PasswordInput({password, onChange}) {
   return (
     <h5 className={styles.PasswordInput}>
-      <input type="text" value={password} onChange={onChange} className={styles.input}/>
+      <input type="password" value={password} onChange={onChange} className={styles.input}/>
     </h5>
   )
 }

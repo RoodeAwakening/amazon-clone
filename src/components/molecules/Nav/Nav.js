@@ -25,9 +25,15 @@ function Nav() {
       <NavBlock textOne={`Hello, ${!user ? "Guest": user.email}`} textTwo={`${user ? "Sign Out" : "Sign In"}`}/>
       </Link>
 
+      <Link to={'./orders'}>
       <NavBlock textOne={"Returns"} textTwo={"& Orders"}/>
+      </Link>
+
       <NavBlock textOne={"Your"} textTwo={"Prime"}/>
+
+      <Link to={'./checkout'}>
       <ShoppingBasket basket={basket}/>
+      </Link>
     </div>
   )
 }

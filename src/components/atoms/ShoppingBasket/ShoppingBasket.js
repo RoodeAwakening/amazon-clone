@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 function ShoppingBasket({basket} ) {
 
   return (
+    <>
     <Link to="/checkout">
       <div className={styles.nav__optionBasket}>
         <ShoppingBasketIcon />
@@ -15,6 +16,7 @@ function ShoppingBasket({basket} ) {
         </span>
       </div>
     </Link>
+    </>
   );
 }
 
