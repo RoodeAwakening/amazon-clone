@@ -1,0 +1,12 @@
+.button{
+  /* pointer */
+  cursor: pointer;
+}
+
+/* button on click look like its been pressed */
+.button:active{
+  /* pointer */
+  cursor: pointer;
+  /* button on click look like its been pressed */
+  box-shadow: inset 0 0 0 8px #BD973B;
+}

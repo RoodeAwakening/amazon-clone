@@ -19,6 +19,7 @@ function Product({ id, buttonText, title, image, rating, price }) {
   
     // dispatch to data layer
     dispatch({
+      type: "ADD_TO_BASKET",
       item: {
         id: id, 
         title: title,
