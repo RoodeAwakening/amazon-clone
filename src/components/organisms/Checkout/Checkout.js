@@ -1,19 +1,26 @@
 import React from 'react'
 import styles from './Checkout.module.css'
 import {useStateValue} from '../../../services/StateProvider'
-import ProductImage from '../../atoms/ProductImage/ProductImage';
 import ProductCart from '../../molecules/ProductCart/ProductCart';
+import CheckoutAd from '../../atoms/CheckoutAd/CheckoutAd';
+import Subtotal from '../../molecules/Subtotal/Subtotal';
 
 
 
 function Checkout({ id, image, title, price, rating, hideButton }) {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
 
 
   return (
-    <>
+    <div className={styles.checkout}>
+      <div className={styles.checkout__left}>
+     <CheckoutAd/>
 
-    {/* map through basket to get products */}
+    <div>
+      <h3>Hello, {user?.email}</h3>
+      <h2 className="checkout__title">Your shopping Basket</h2>
+
+       {/* map through basket to get products */}
     {basket.map(item => (
       <ProductCart
       key={item.id}
@@ -24,8 +31,13 @@ function Checkout({ id, image, title, price, rating, hideButton }) {
       rating={item.rating}
       />
       ))}
-      
-      </>
+    </div>
+   
+      </div>
+      <div className={styles.checkout__right}>
+        <Subtotal/>
+      </div>
+      </div>
   )
 }
 
